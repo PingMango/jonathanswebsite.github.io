@@ -1,0 +1,71 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <title>Benshi : The Voice Of Silent Film</title>
+  <link rel  = "stylesheet" href = "index.css">
+</head>
+<body>
+  <header>
+    <div id = "header">
+      <h1>Benshi : 弁士</h1>
+      <h1>The Voice of Silent Film</h1>
+    </div>
+  </header>
+  <section>
+    <a href = ""><img id = "links" src = "Buttons/Project.png"></a>
+    <a href = ""><img id = "links" src = "Buttons/About.png"></a>
+    <a href = ""><img id = "links" src = "Buttons/Resources.png"></a>
+  </section>
+  <section>
+    <div id = "section">Section 1</div>
+    <audio controls style = "margin-top:1.5vw;">
+      <source src = "Test.ogg" type = "audio/ogg">
+      <source src = "Test.mp3" type = "audio/mp3">
+    </audio>
+    <div id = "gallery">
+      <div class="w3-content w3-display-container">
+        <img class="mySlides1" src="question.jpg" style="width:25%">
+        <img class="mySlides1" src="question2.jpg" style="width:25%">
+        <button class="w3-button w3-black w3-display-left" onclick="plusDivs(-1, 0)">&#10094;</button>
+        <button class="w3-button w3-black w3-display-right" onclick="plusDivs(1, 0)">&#10095;</button>
+      </div>
+    </div>
+    <div id = "section">Section 2</div>
+    <audio controls style = "margin-top:1.5vw;">
+      <source src = "Test.ogg" type = "audio/ogg">
+      <source src = "Test.mp3" type = "audio/mp3">
+    </audio>
+    <div id = "gallery">
+      <div class="w3-content w3-display-container">
+        <img class="mySlides2" src="question3.png" style="width:25%">
+        <img class="mySlides2" src="question4.png" style="width:25%">
+        <button class="w3-button w3-black w3-display-left" onclick="plusDivs(-1, 1)">&#10094;</button>
+        <button class="w3-button w3-black w3-display-right" onclick="plusDivs(1, 1)">&#10095;</button>
+      </div>
+
+      <script>
+      var slideIndex = [1,1];
+      var slideId = ["mySlides1", "mySlides2"]
+      showDivs(1, 0);
+      showDivs(1, 1);
+
+      function plusDivs(n, no) {
+        showDivs(slideIndex[no] += n, no);
+      }
+
+      function showDivs(n, no) {
+        var i;
+        var x = document.getElementsByClassName(slideId[no]);
+        if (n > x.length) {slideIndex[no] = 1}
+        if (n < 1) {slideIndex[no] = x.length}
+        for (i = 0; i < x.length; i++) {
+           x[i].style.display = "none";
+        }
+        x[slideIndex[no]-1].style.display = "block";
+      }
+      </script>
+    </section>
+    <footer>
+    </footer>
+</body>
+</html>
